@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-12 mt-4">
                 <h1>Tentang</h1>
             </div>
         </div>
@@ -29,7 +29,7 @@
                 <a href="https://www.facebook.com/doelmidoel/" target="_blank"><img src="../assets/facebook-logo-button.png" alt="fb" /></a>
             </div>
             <div class="col-md-3">
-                <img v-on:click="popup(+62895326308925)" src="../assets/whatsapp-logo.png" alt="wa" />
+                <a href="https://api.whatsapp.com/send?phone=62895326308925" target="_blank"><img src="../assets/whatsapp-logo.png" alt="wa" /></a>
             </div>
             <div class="col-md-3">
                 <a href="https://github.com/doelmi" target="_blank"><img src="../assets/git-logo.png" alt="git" /></a>
