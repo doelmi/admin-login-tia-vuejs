@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import UsersList from './components/UsersList.vue'
 import LogsList from './components/LogsList.vue'
 import LoginPage from './components/LoginPage.vue'
+import AboutPage from './components/AboutPage.vue'
 
 Vue.use(Router)
 
@@ -25,6 +26,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: LoginPage
+    },
+    {
+     path: '/about',
+     name: 'about',
+     component: AboutPage
     }
   ]
 })
