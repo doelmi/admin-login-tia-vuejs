@@ -197,6 +197,15 @@ export default {
   created: function() {
     this.debouncedGetUsername = _.debounce(this.getUsernameCorrection, 500)
     this.debouncedGetNIM = _.debounce(this.getNIMCorrection, 500)
+
+    if (localStorage.token == null) {
+      this.$router.push({
+        name: 'login',
+        query: {
+          redirect: 'userslist'
+        }
+      });
+    }
   },
   methods: {
     getUsernameCorrection: function() {
@@ -368,16 +377,6 @@ export default {
           this.setData(response)
         })
         .catch(err => {})
-    }
-  },
-  created() {
-    if (localStorage.token == null) {
-      this.$router.push({
-        name: 'login',
-        query: {
-          redirect: 'userslist'
-        }
-      });
     }
   }
 }
